@@ -70,28 +70,30 @@
       margin-bottom: 40px;
       text-align: center;
     }
+    .project-container {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap; /* Ensure they stay side by side */
+    }
     .project {
       background: #333; /* Dark background for project boxes */
       color: #fff; /* White text color */
       padding: 20px;
       border: 1px solid #444;
       border-radius: 8px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      width: 48%; /* Equal width for both projects */
       margin-bottom: 20px;
-      flex-wrap: wrap;
-      gap: 20px;
     }
     .project iframe {
-      width: 48%; /* Set iframe width to 48% for even spacing */
+      width: 100%;
       aspect-ratio: 16 / 9; /* Maintain aspect ratio for videos */
       border: none;
     }
-    .project h3 {
-      width: 100%; /* Make sure the title takes full width */
+    .project h4 {
       text-align: center;
-      margin-bottom: 20px;
+      width: 100%;
+      margin-bottom: 10px;
     }
     footer {
       text-align: center;
@@ -135,15 +137,16 @@
   <!-- Projects Section -->
   <section>
     <h2>Projects</h2>
-    <div class="project">
-      <h3>Rodeo Nation</h3>
-      <div>
+    <div class="project-container">
+      <div class="project">
+        <h4>YouTube Shorts</h4>
         <iframe src="https://www.youtube.com/embed/OuLI8OB4Vc4"
           title="YouTube Shorts Player"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen></iframe>
       </div>
-      <div>
+      <div class="project">
+        <h4>TikTok Edits</h4>
         <iframe src="https://www.tiktok.com/embed/v2/7488102946782055710"
                 title="TikTok Embed"
                 width="100%"
