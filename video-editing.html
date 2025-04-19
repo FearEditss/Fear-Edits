@@ -55,12 +55,15 @@
       padding-bottom: 10px;
       margin-bottom: 30px;
       text-transform: capitalize;
+      text-align: center;
     }
     .portfolio-row {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
       gap: 20px;
+      margin-top: 20px;
+      flex-wrap: wrap;
     }
     .project {
       background: #1a1a1a;
@@ -87,6 +90,7 @@
       font-style: italic;
       box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
       margin-bottom: 40px;
+      text-align: center;
     }
     footer {
       text-align: center;
@@ -95,7 +99,7 @@
       color: #666;
     }
     a { color: #1e90ff; text-decoration: none; }
-      #particles-js {
+    #particles-js {
       position: fixed;
       width: 100%;
       height: 100%;
@@ -109,8 +113,8 @@
 <body>
   <div id="particles-js"></div>
   <header style="background: transparent; position: relative; z-index: 1; height: 300px; display: flex; align-items: center; justify-content: center;">
-  <img src="https://feareditss.github.io/Fear-Edits/banner.png" alt="Fear Edits Banner" style="max-height: 100%; width: auto; object-fit: contain; display: block;" />
-</header>
+    <img src="https://feareditss.github.io/Fear-Edits/banner.png" alt="Fear Edits Banner" style="max-height: 100%; width: auto; object-fit: contain; display: block;" />
+  </header>
 
   <div class="home-btn">
     <a href="index.html">
@@ -131,26 +135,55 @@
     <h2>Portfolio</h2>
     <div class="portfolio-row">
       <div class="project">
-        <h3 style="text-align:center; margin-top: 0;">YouTube Shorts</h3>
+        <h3>YouTube Shorts</h3>
         <iframe src="https://www.youtube.com/embed/OuLI8OB4Vc4"
           title="YouTube Shorts Player"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen></iframe>
       </div>
       <div class="project">
-  <h3 style="text-align:center; margin-top: 0;">TikTok Edits</h3>
-  <div style="background-color: #0a0a0a; border-radius: 12px; overflow: hidden; padding: 0; width: 100%; max-width: 360px; margin: auto;">
-    <iframe src="https://www.tiktok.com/embed/v2/7488102946782055710"
-            title="TikTok Embed"
-            width="100%"
-            height="700"
-            frameborder="0"
-            scrolling="no"
-            allowfullscreen
-            style="border: none; display: block;">
-    </iframe>
-  </div>
-</div>
+        <h3>TikTok Edits</h3>
+        <div style="background-color: #0a0a0a; border-radius: 12px; overflow: hidden; padding: 0; width: 100%; max-width: 360px; margin: auto;">
+          <iframe src="https://www.tiktok.com/embed/v2/7488102946782055710"
+                  title="TikTok Embed"
+                  width="100%"
+                  height="700"
+                  frameborder="0"
+                  scrolling="no"
+                  allowfullscreen
+                  style="border: none; display: block;">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Projects</h2>
+    <div class="portfolio-row">
+      <div class="project">
+        <h3>Rodeo Nation</h3>
+        <div class="project">
+          <h3 style="text-align:center; margin-top: 0;">YouTube Shorts</h3>
+          <iframe src="https://www.youtube.com/embed/OuLI8OB4Vc4"
+            title="YouTube Shorts Player"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
+        <div class="project">
+          <h3 style="text-align:center; margin-top: 0;">TikTok Edits</h3>
+          <div style="background-color: #0a0a0a; border-radius: 12px; overflow: hidden; padding: 0; width: 100%; max-width: 360px; margin: auto;">
+            <iframe src="https://www.tiktok.com/embed/v2/7488102946782055710"
+                    title="TikTok Embed"
+                    width="100%"
+                    height="700"
+                    frameborder="0"
+                    scrolling="no"
+                    allowfullscreen
+                    style="border: none; display: block;">
+            </iframe>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -188,6 +221,6 @@
       "retina_detect": true
     });
   </script>
+
 </body>
 </html>
-
