@@ -70,6 +70,24 @@
       box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
       margin-bottom: 40px;
     }
+    .home-btn {
+      text-align: left;
+      max-width: 1000px;
+      margin: 20px auto 0;
+      padding: 0 20px;
+    }
+    .home-btn a {
+      color: #1e90ff;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .home-btn a span {
+      font-size: 1.2rem;
+    }
     footer {
       text-align: center;
       padding: 40px 20px;
@@ -81,8 +99,16 @@
 </head>
 <body>
   <header>
-    <img src="https://feareditss.github.io/Fear-Edits/logo.png" alt="Fear Edits Logo">
+    <a href="index.html">
+      <img src="https://feareditss.github.io/Fear-Edits/logo.png" alt="Fear Edits Logo">
+    </a>
   </header>
+
+  <div class="home-btn">
+    <a href="index.html">
+      <span>←</span> Return Home
+    </a>
+  </div>
 
   <section>
     <h2>Professional Experience</h2>
@@ -116,6 +142,5 @@
   <footer>
     &copy; 2025 Fear Edits. All Rights Reserved.
   </footer>
-
 </body>
 </html>
