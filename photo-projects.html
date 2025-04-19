@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Photo Projects | Fear Edits</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0a0a0a;
+      color: #fff;
+    }
+    header {
+      background: #111;
+      overflow: hidden;
+      position: relative;
+      width: 100vw;
+      height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    header img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    h2, h3 {
+      border-bottom: 2px solid #444;
+      padding-bottom: 10px;
+      margin-bottom: 30px;
+      text-transform: capitalize;
+    }
+    .insta-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+    iframe {
+      width: 100%;
+      border: none;
+      aspect-ratio: 1 / 1;
+    }
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      font-size: 0.9rem;
+      color: #666;
+    }
+    a { color: #1e90ff; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="index.html">
+      <img src="https://feareditss.github.io/Fear-Edits/logo.png" alt="Fear Edits Logo">
+    </a>
+  </header>
+
+  <div style="text-align: left; max-width: 1000px; margin: 20px auto 0; padding: 0 20px;">
+    <a href="index.html" style="color: #1e90ff; text-decoration: none; font-weight: bold; font-size: 1rem; display: inline-flex; align-items: center; gap: 6px;">
+      <span style="font-size: 1.2rem;">←</span> Return Home
+    </a>
+  </div>
+
+  <section>
+    <h2>Instagram Gallery</h2>
+    <div class="insta-grid">
+      <iframe src="https://www.instagram.com/p/CxR7YQbL3nX/embed" allowtransparency="true"></iframe>
+      <iframe src="https://www.instagram.com/p/CxS8RE3LYjc/embed" allowtransparency="true"></iframe>
+      <iframe src="https://www.instagram.com/p/CxT9TY8LcDd/embed" allowtransparency="true"></iframe>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Fear Edits. All Rights Reserved.
+  </footer>
+
+</body>
+</html>
