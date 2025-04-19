@@ -59,13 +59,16 @@
     }
     .insta-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 30px;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px;
       padding: 0 20px;
     }
     .insta-grid img {
       width: 100%;
-      border-radius: 8px;
+      height: auto;
+      max-width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
     }
     footer {
       text-align: center;
