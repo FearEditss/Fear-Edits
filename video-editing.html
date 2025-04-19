@@ -22,10 +22,11 @@
       justify-content: center;
     }
     header img {
-      width: 100%;
+      width: 100vw;
       height: 100%;
       object-fit: cover;
       object-position: center;
+      display: block;
     }
     .home-btn {
       text-align: left;
@@ -56,37 +57,15 @@
       margin-bottom: 30px;
       text-transform: capitalize;
     }
-    .portfolio-row {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      gap: 20px;
+    .insta-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
     }
-    .project {
-      background: #1a1a1a;
-      padding: 20px;
-      width: 48%;
-      border: 1px solid #333;
-      border-radius: 8px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-    .project iframe {
+    iframe {
       width: 100%;
-      aspect-ratio: 9 / 16;
       border: none;
-    }
-    .experience-container {
-      background: #1a1a1a;
-      padding: 40px;
-      border-radius: 10px;
-      border: 1px solid #333;
-      line-height: 1.8;
-      font-size: 1.1rem;
-      font-style: italic;
-      box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
-      margin-bottom: 40px;
+      aspect-ratio: 1 / 1;
     }
     footer {
       text-align: center;
@@ -113,7 +92,7 @@
   <section>
     <h2>Professional Experience</h2>
     <div class="experience-container">
-      During my time working with Epic Games and Fornite, I created original social media content for major platforms like TikTok, Instagram, and Twitter. My work helped promote their brand in engaging and authentic ways, allowing me to blend gaming culture with dynamic editing techniques. 
+      During my time working with Epic Games, I created original social media content for major platforms like TikTok, Instagram, and Twitter. My work helped promote their brand in engaging and authentic ways, allowing me to blend gaming culture with dynamic editing techniques.
       <br><br>
       Outside of that, I independently run and manage multiple content channels. I handle everything — from filming and editing to trend analysis and platform strategy. My TikTok channel has grown steadily through consistent posting, niche-targeted storytelling, and mastering short-form editing techniques that connect with audiences fast.
     </div>
@@ -142,5 +121,6 @@
   <footer>
     &copy; 2025 Fear Edits. All Rights Reserved.
   </footer>
+
 </body>
 </html>
