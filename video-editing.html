@@ -80,11 +80,18 @@
       justify-content: space-between;
       align-items: center;
       margin-bottom: 20px;
+      flex-wrap: wrap;
+      gap: 20px;
     }
     .project iframe {
-      width: 48%; /* Adjust width to fit side by side */
-      aspect-ratio: 9 / 16;
+      width: 48%; /* Set iframe width to 48% for even spacing */
+      aspect-ratio: 16 / 9; /* Maintain aspect ratio for videos */
       border: none;
+    }
+    .project h4 {
+      text-align: center;
+      width: 100%;
+      margin-bottom: 10px;
     }
     footer {
       text-align: center;
