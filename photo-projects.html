@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fear Edits | Home</title>
+  <title>Photo Projects | Fear Edits</title>
   <style>
     body {
       margin: 0;
@@ -12,61 +12,49 @@
       color: #fff;
     }
     header {
-      background: transparent;
+      background: #111;
+      position: relative;
+      width: 100vw;
       height: 300px;
+      overflow: hidden;
       display: flex;
       align-items: center;
       justify-content: center;
     }
-    h1.site-title {
-      font-size: 3.5rem;
-      font-weight: bold;
-      color: #5dcafc;
-      margin: 0;
+    header img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
     }
-    main {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 60px 20px;
+    .home-btn {
+      text-align: left;
+      max-width: 1000px;
+      margin: 20px auto 0;
+      padding: 0 20px;
     }
-    .btn-group {
-      display: flex;
-      gap: 20px;
-      margin-top: 40px;
-    }
-    .btn-group a {
+    .home-btn a {
+      color: #1e90ff;
       text-decoration: none;
-      background: #1a1a1a;
-      padding: 15px 30px;
-      border-radius: 8px;
-      color: #fff;
       font-weight: bold;
-      font-size: 1.1rem;
-      border: 2px solid #333;
-      transition: background 0.3s, transform 0.2s;
+      font-size: 1rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
     }
-    .btn-group a:hover {
-      background: #333;
-      transform: scale(1.05);
+    .home-btn a span {
+      font-size: 1.2rem;
     }
     section {
       padding: 60px 20px;
       max-width: 1000px;
       margin: auto;
     }
-    .about-container {
-      background: #1a1a1a;
-      padding: 40px;
-      border-radius: 10px;
-      border: 1px solid #333;
-      line-height: 1.8;
-      font-size: 1.1rem;
-      font-style: italic;
-      box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
-      margin-top: 60px;
+    h2, h3 {
+      border-bottom: 2px solid #444;
+      padding-bottom: 10px;
+      margin-bottom: 30px;
+      text-transform: capitalize;
     }
     .insta-grid {
       display: grid;
@@ -74,13 +62,17 @@
       gap: 30px;
       padding: 0 20px;
     }
-
     .insta-grid img {
       width: 100%;
       border-radius: 8px;
     }
-
     footer {
+      text-align: center;
+      padding: 40px 20px;
+      font-size: 0.9rem;
+      color: #666;
+    }
+    a { color: #1e90ff; text-decoration: none; }
     #particles-js {
       position: fixed;
       width: 100%;
@@ -96,7 +88,7 @@
   <div id="particles-js"></div>
 
   <header>
-    <h1 class="site-title">Fear Edits</h1>
+  <img src="https://feareditss.github.io/Fear-Edits/banner.png" alt="Fear Edits Banner" style="width: 100%; max-height: 300px; object-fit: contain; display: block; margin: 0 auto;" />
 </header>
 
   <div class="home-btn">
