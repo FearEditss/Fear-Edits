@@ -98,6 +98,7 @@
       text-align: center;
     }
 
+    /* Collapsible Button for Sections */
     .collapsible {
       background: linear-gradient(135deg, #5dcafc, #ffffff);
       color: #fff;
@@ -145,6 +146,14 @@
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     }
 
+    /* Style for video boxes */
+    .project-container {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
     .project {
       background: #333;
       color: #fff;
@@ -154,15 +163,15 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      width: 400px;
-      height: 600px; /* Increased height for better video display */
+      width: 400px; /* Adjusted to be smaller */
+      height: 550px; /* Keep this height for better fitting */
       margin-bottom: 20px;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     }
 
     .project iframe {
       width: 100%;
-      height: 80%;
+      height: 80%; /* Adjusted to better fit inside the box */
       border: none;
     }
 
@@ -171,6 +180,7 @@
       margin-bottom: 10px;
     }
 
+    /* Social media links styles */
     .social-links {
       display: flex;
       justify-content: center;
@@ -205,7 +215,7 @@
       }
 
       .project iframe {
-        height: 250px;
+        height: 250px; /* Adjust iframe height for mobile */
       }
     }
 
@@ -213,6 +223,7 @@
 </head>
 <body>
 
+  <!-- White net effect background -->
   <div id="particles-js"></div>
 
   <header>
@@ -351,4 +362,3 @@
 
 </body>
 </html>
-
