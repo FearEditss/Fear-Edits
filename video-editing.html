@@ -7,7 +7,7 @@
   <style>
     body {
       margin: 0;
-      font-family: 'Poppins', sans-serif;
+      font-family: Arial, sans-serif;
       background: #fff;
       color: #000;
       height: 100%;
@@ -97,58 +97,9 @@
       text-align: center;
     }
 
-    /* Collapsible Button for Sections */
-    .collapsible {
-      background: linear-gradient(135deg, #5dcafc, #ffffff);
-      color: #fff;
-      cursor: pointer;
-      padding: 15px;
-      width: 100%;
-      text-align: center;
-      border: none;
-      outline: none;
-      font-size: 1.5rem;
-      border-radius: 10px;
-      transition: 0.3s;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      opacity: 0.9;
-    }
-
-    .collapsible:hover {
-      background: linear-gradient(135deg, #4ba6d2, #ffffff);
-    }
-
-    .collapsible.active {
-      background: linear-gradient(135deg, #3a8fb1, #ffffff);
-    }
-
-    .collapsible .arrow {
-      font-size: 1.5rem;
-      color: #5dcafc;
-      transition: transform 0.3s ease;
-    }
-
-    .collapsible.active .arrow {
-      transform: rotate(45deg);
-    }
-
-    .content {
-      padding: 0 20px;
-      display: none;
-      overflow: hidden;
-      background-color: #444;
-      border-radius: 10px;
-      margin-top: 10px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    }
-
-    /* Style for video boxes */
     .project-container {
       display: flex;
-      justify-content: center;
+      justify-content: space-between; /* Ensures videos are side by side */
       gap: 20px;
       flex-wrap: wrap;
     }
@@ -156,21 +107,20 @@
     .project {
       background: #333;
       color: #fff;
-      padding: 15px;
+      padding: 20px;
       border: 1px solid #444;
       border-radius: 8px;
       display: flex;
       flex-direction: column;
       align-items: center;
-      width: 400px;
-      height: 550px;
+      width: 48%; /* Adjusted width to fit side by side */
+      height: 600px; /* Maintain height for better video display */
       margin-bottom: 20px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     }
 
     .project iframe {
       width: 100%;
-      height: 80%;
+      height: 100%;
       border: none;
     }
 
@@ -179,7 +129,6 @@
       margin-bottom: 10px;
     }
 
-    /* Social media links styles */
     .social-links {
       display: flex;
       justify-content: center;
@@ -214,7 +163,7 @@
       }
 
       .project iframe {
-        height: 250px; /* Adjust iframe height for mobile */
+        height: 250px;
       }
     }
 
@@ -222,10 +171,11 @@
 </head>
 <body>
 
+  <!-- White net effect background -->
   <div id="particles-js"></div>
 
   <header>
-    <img src="https://feareditss.github.io/Fear-Edits/banner.png" alt="Fear Edits Banner" />
+    <img src="https://feareditss.github.io/Fear-Edits/banner.png" alt="Fear Edits Banner" style="max-height: 100%; width: auto; object-fit: contain; display: block;" />
   </header>
 
   <div class="home-btn">
@@ -233,38 +183,9 @@
   </div>
 
   <section>
-    <h2>Professional Experience</h2>
-    <div class="experience-container">
-      During my time working with Fortnite, I created original social media content for major platforms like TikTok, Instagram, and Twitter. My work helped promote their brand in engaging and authentic ways, allowing me to blend gaming culture with dynamic editing techniques. 
-      <br><br>
-      Outside of that, I independently run and manage multiple content channels. I handle everything — from filming and editing to trend analysis and platform strategy. My TikTok channel has grown steadily through consistent posting, niche-targeted storytelling, and mastering short-form editing techniques that connect with audiences fast.
-    </div>
-  </section>
-
-  <!-- Collapsible YouTube Section -->
-  <section>
-    <button class="collapsible">
-      YouTube
-      <span class="arrow">+</span>
-    </button>
-    <div class="content">
-      <div class="project">
-        <h4>YouTube Shorts</h4>
-        <iframe src="https://www.youtube.com/embed/OuLI8OB4Vc4"
-          title="YouTube Shorts Player"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen></iframe>
-      </div>
-    </div>
-  </section>
-
-  <!-- Collapsible TikTok Section -->
-  <section>
-    <button class="collapsible">
-      TikTok
-      <span class="arrow">+</span>
-    </button>
-    <div class="content">
+    <h2>TikTok</h2>
+    <div class="project-container">
+      <!-- TikTok Edit 1 -->
       <div class="project">
         <h4>TikTok Edit 1</h4>
         <iframe src="https://www.tiktok.com/embed/v2/7488102946782055710"
@@ -277,6 +198,7 @@
                 style="border: none; display: block;"></iframe>
       </div>
 
+      <!-- TikTok Edit 2 -->
       <div class="project">
         <h4>TikTok Edit 2</h4>
         <iframe src="https://www.tiktok.com/embed/v2/7478408102598003998?lang=en"
@@ -291,28 +213,11 @@
     </div>
   </section>
 
-  <section>
-    <h2>Follow Me</h2>
-    <div class="social-links">
-      <a href="https://x.com/FearEdits_" target="_blank">
-        <img src="twitter-logo.png" alt="Twitter">
-      </a>
-      <a href="https://www.tiktok.com/@rodeonationyt?lang=en" target="_blank">
-        <img src="tiktik-logo.png" alt="TikTok">
-      </a>
-      <a href="https://www.youtube.com/@RodeoNationMedia" target="_blank">
-        <img src="youtube-logo.png" alt="YouTube">
-      </a>
-      <a href="https://www.instagram.com/fearedphotos/" target="_blank">
-        <img src="instagram-logo.png" alt="Instagram">
-      </a>
-    </div>
-  </section>
-
   <footer>
     &copy; 2025 Fear Edits. All Rights Reserved.
   </footer>
 
+  <!-- White net effect background -->
   <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
   <script>
     particlesJS("particles-js", {
@@ -342,21 +247,10 @@
       },
       "retina_detect": true
     });
-
-    // JavaScript to handle collapsible tabs
-    var coll = document.getElementsByClassName("collapsible");
-    for (var i = 0; i < coll.length; i++) {
-      coll[i].addEventListener("click", function() {
-        this.classList.toggle("active");
-        var content = this.nextElementSibling;
-        if (content.style.display === "block") {
-          content.style.display = "none";
-        } else {
-          content.style.display = "block";
-        }
-      });
-    }
   </script>
+
+</body>
+</html>
 
 </body>
 </html>
