@@ -11,6 +11,16 @@
       color: #000;
     }
 
+    /* Vanta.js Background Animation */
+    #vanta-clouds {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+
     header {
       background: #111;
       position: relative;
@@ -158,6 +168,9 @@
 </head>
 <body>
 
+  <!-- Vanta.js Cloud Background -->
+  <div id="vanta-clouds"></div>
+
   <header>
     <img src="https://feareditss.github.io/Fear-Edits/banner.png" alt="Fear Edits Banner" style="max-height: 100%; width: auto; object-fit: contain; display: block;" />
   </header>
@@ -240,6 +253,19 @@
   <footer>
     &copy; 2025 Fear Edits. All Rights Reserved.
   </footer>
+
+  <!-- Include Vanta.js for Cloud Animation -->
+  <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.background.min.js"></script>
+  <script>
+    VANTA.BACKGROUND({
+      el: "#vanta-clouds",
+      mouseControls: true,
+      touchControls: true,
+      gyroControls: false,
+      backgroundColor: 0x1f1f1f,  // Dark background
+      speed: 1.5
+    });
+  </script>
 
 </body>
 </html>
