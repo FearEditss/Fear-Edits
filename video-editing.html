@@ -88,7 +88,7 @@
 
     /* Collapsible section styling */
     .collapsible {
-      background-color: #333;
+      background: linear-gradient(135deg, #5dcafc, #ffffff);
       color: #fff;
       cursor: pointer;
       padding: 15px;
@@ -102,23 +102,24 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      opacity: 0.9; /* Slight transparency */
     }
 
     .collapsible:hover {
-      background-color: #555;
+      background: linear-gradient(135deg, #4ba6d2, #ffffff);
     }
 
     .collapsible.active {
-      background-color: #444;
+      background: linear-gradient(135deg, #3a8fb1, #ffffff); /* Active state color */
     }
 
-    .arrow {
+    .collapsible .arrow {
       transition: transform 0.3s ease;
-      margin-left: 10px;
     }
 
     .collapsible.active .arrow {
-      transform: rotate(180deg); /* Rotate the arrow when expanded */
+      transform: rotate(45deg); /* Rotate the plus to form a cross */
     }
 
     .content {
@@ -141,7 +142,7 @@
       flex-direction: column;
       align-items: center;
       width: 100%;
-      height: 600px; /* Adjusted height */
+      height: 600px;
       margin-bottom: 20px;
       transition: height 0.3s ease;
     }
@@ -210,7 +211,7 @@
   <section>
     <button class="collapsible">
       YouTube
-      <span class="arrow">&#9660;</span> <!-- Downward Arrow -->
+      <span class="arrow">+</span> <!-- Plus icon -->
     </button>
     <div class="content">
       <div class="project">
@@ -227,7 +228,7 @@
   <section>
     <button class="collapsible">
       TikTok
-      <span class="arrow">&#9660;</span> <!-- Downward Arrow -->
+      <span class="arrow">+</span> <!-- Plus icon -->
     </button>
     <div class="content">
       <!-- TikTok Edit 1 -->
