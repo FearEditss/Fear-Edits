@@ -101,63 +101,34 @@
       text-align: center;
     }
 
-    .project-container {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-
-    .project {
-      background: #333;
+    /* Gradient dropdown for each section */
+    .dropdown {
+      background: linear-gradient(135deg, #5dcafc, #4ba6d2); /* Gradient background */
       color: #fff;
-      padding: 20px;
-      border: 1px solid #444;
+      font-size: 1.8rem; /* Reduced font size */
+      font-weight: bold;
+      padding: 15px 25px; /* Adjusted padding */
       border-radius: 8px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      width: 500px;
-      height: 600px; /* Increased height for better video display */
-      margin-bottom: 20px;
+      margin-bottom: 20px; /* Reduced margin */
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Softer shadow */
+      text-transform: uppercase;
+      letter-spacing: 1.5px; /* Reduced letter-spacing */
+      cursor: pointer;
+      transition: background 0.3s ease;
     }
 
-    .project iframe {
-      width: 100%;
-      height: 100%; /* Adjusted to fit the new box height */
-      border: none;
+    .dropdown:hover {
+      background: #4ba6d2;
     }
 
-    .project h4 {
-      text-align: center;
-      margin-bottom: 10px;
+    .content {
+      display: none;
+      margin-top: 15px;
+      background-color: #333;
+      color: white;
+      padding: 20px;
+      border-radius: 8px;
     }
-
-    .social-links {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      margin-top: 40px;
-    }
-
-    .social-links a img {
-      width: 40px;
-      height: 40px;
-      transition: transform 0.3s ease;
-    }
-
-    .social-links a img:hover {
-      transform: scale(1.1);
-    }
-
-    footer {
-      text-align: center;
-      padding: 40px 20px;
-      font-size: 0.9rem;
-      color: #666;
-    }
-
-    a { color: #1e90ff; text-decoration: none; }
 
     /* Mobile styles */
     @media (max-width: 768px) {
@@ -170,7 +141,6 @@
         height: 250px; /* Adjust iframe height for mobile */
       }
     }
-
   </style>
 </head>
 <body>
@@ -195,46 +165,49 @@
     </div>
   </section>
 
+  <!-- YouTube Section with Dropdown -->
   <section>
-    <h2>YouTube</h2>
-    <div class="project-container">
-      <div class="project">
-        <h4>YouTube Shorts</h4>
-        <iframe src="https://www.youtube.com/embed/OuLI8OB4Vc4"
-          title="YouTube Shorts Player"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen></iframe>
+    <div class="dropdown" onclick="toggleContent('youtubeContent')">YouTube</div>
+    <div id="youtubeContent" class="content">
+      <div class="project-container">
+        <div class="project">
+          <h4>YouTube Shorts</h4>
+          <iframe src="https://www.youtube.com/embed/OuLI8OB4Vc4"
+            title="YouTube Shorts Player"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
       </div>
     </div>
   </section>
 
+  <!-- TikTok Section with Dropdown -->
   <section>
-    <h2>TikTok</h2>
-    <div class="project-container">
-      <!-- TikTok Edit 1 -->
-      <div class="project">
-        <h4>TikTok Edit 1</h4>
-        <iframe src="https://www.tiktok.com/embed/v2/7488102946782055710"
-                title="TikTok Embed 1"
-                width="100%"
-                height="100%"
-                frameborder="0"
-                scrolling="no"
-                allowfullscreen
-                style="border: none; display: block;"></iframe>
-      </div>
-
-      <!-- TikTok Edit 2 (Updated) -->
-      <div class="project">
-        <h4>TikTok Edit 2</h4>
-        <iframe src="https://www.tiktok.com/embed/v2/7478408102598003998?lang=en"
-                title="TikTok Embed 2"
-                width="100%"
-                height="100%"
-                frameborder="0"
-                scrolling="no"
-                allowfullscreen
-                style="border: none; display: block;"></iframe>
+    <div class="dropdown" onclick="toggleContent('tiktokContent')">TikTok</div>
+    <div id="tiktokContent" class="content">
+      <div class="project-container">
+        <div class="project">
+          <h4>TikTok Edit 1</h4>
+          <iframe src="https://www.tiktok.com/embed/v2/7488102946782055710"
+                  title="TikTok Embed 1"
+                  width="100%"
+                  height="100%"
+                  frameborder="0"
+                  scrolling="no"
+                  allowfullscreen
+                  style="border: none; display: block;"></iframe>
+        </div>
+        <div class="project">
+          <h4>TikTok Edit 2</h4>
+          <iframe src="https://www.tiktok.com/embed/v2/7478408102598003998?lang=en"
+                  title="TikTok Embed 2"
+                  width="100%"
+                  height="100%"
+                  frameborder="0"
+                  scrolling="no"
+                  allowfullscreen
+                  style="border: none; display: block;"></iframe>
+        </div>
       </div>
     </div>
   </section>
@@ -261,9 +234,18 @@
     &copy; 2025 Fear Edits. All Rights Reserved.
   </footer>
 
-  <!-- White net effect background -->
   <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
   <script>
+    // Function to toggle dropdown content visibility
+    function toggleContent(id) {
+      var content = document.getElementById(id);
+      if (content.style.display === "block") {
+        content.style.display = "none";
+      } else {
+        content.style.display = "block";
+      }
+    }
+
     particlesJS("particles-js", {
       "particles": {
         "number": { "value": 80 },
@@ -292,6 +274,5 @@
       "retina_detect": true
     });
   </script>
-
 </body>
 </html>
