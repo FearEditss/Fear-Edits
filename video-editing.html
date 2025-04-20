@@ -11,11 +11,11 @@
   <style>
     body {
       margin: 0;
-      font-family: 'Poppins', sans-serif; /* Updated font */
+      font-family: 'Poppins', sans-serif;
       background: #fff;
       color: #000;
       height: 100%;
-      overflow-y: auto; /* Allow scrolling */
+      overflow-y: auto;
     }
 
     /* White net effect background */
@@ -32,8 +32,7 @@
       background: transparent;
       position: relative;
       width: 100vw;
-      height: 200px; /* Adjusted to match the photo-project header size */
-      overflow: hidden;
+      height: 180px; /* Adjusted height for proper header size */
       display: flex;
       align-items: center;
       justify-content: center;
@@ -43,15 +42,14 @@
     header img {
       width: 100%;
       height: 100%;
-      object-fit: cover;
-      object-position: center;
+      object-fit: contain;
     }
 
     .home-btn {
       position: absolute;
-      top: 250px; /* Adjusted to align better with content */
+      top: 250px; /* Adjusted position to align better with the banner */
       left: 50%;
-      transform: translateX(-50%); /* Centered horizontally */
+      transform: translateX(-50%);
       z-index: 10;
       text-align: center;
       max-width: 500px;
@@ -90,7 +88,20 @@
       text-align: center;
     }
 
-    /* Collapsible section styling */
+    .experience-container {
+      background: #333;
+      color: #fff;
+      padding: 40px;
+      border-radius: 10px;
+      border: 1px solid #444;
+      line-height: 1.8;
+      font-size: 1.1rem;
+      font-style: italic;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      margin-bottom: 40px;
+      text-align: center;
+    }
+
     .collapsible {
       background: linear-gradient(135deg, #5dcafc, #ffffff);
       color: #fff;
@@ -107,7 +118,7 @@
       justify-content: space-between;
       align-items: center;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      opacity: 0.9; /* Slight transparency */
+      opacity: 0.9;
     }
 
     .collapsible:hover {
@@ -115,17 +126,17 @@
     }
 
     .collapsible.active {
-      background: linear-gradient(135deg, #3a8fb1, #ffffff); /* Active state color */
+      background: linear-gradient(135deg, #3a8fb1, #ffffff);
     }
 
     .collapsible .arrow {
       font-size: 1.5rem;
-      color: #5dcafc; /* Light blue for the arrow */
+      color: #5dcafc;
       transition: transform 0.3s ease;
     }
 
     .collapsible.active .arrow {
-      transform: rotate(45deg); /* Rotate the plus to form a cross */
+      transform: rotate(45deg);
     }
 
     .content {
@@ -138,25 +149,24 @@
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     }
 
-    /* Adjusted size for project boxes */
     .project {
       background: #333;
       color: #fff;
-      padding: 15px; /* Reduced padding */
+      padding: 15px;
       border: 1px solid #444;
       border-radius: 8px;
       display: flex;
       flex-direction: column;
       align-items: center;
-      width: 400px; /* Adjusted width for better fit */
-      height: 600px; /* Restored the height for the videos */
+      width: 400px;
+      height: 600px;
       margin-bottom: 20px;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     }
 
     .project iframe {
       width: 100%;
-      height: 80%; /* Adjusted iframe height */
+      height: 80%;
       border: none;
     }
 
@@ -199,7 +209,7 @@
       }
 
       .project iframe {
-        height: 250px; /* Adjust iframe height for mobile */
+        height: 250px;
       }
     }
 
@@ -230,7 +240,7 @@
   <section>
     <button class="collapsible">
       YouTube
-      <span class="arrow">+</span> <!-- Plus icon -->
+      <span class="arrow">+</span>
     </button>
     <div class="content">
       <div class="project">
@@ -247,10 +257,9 @@
   <section>
     <button class="collapsible">
       TikTok
-      <span class="arrow">+</span> <!-- Plus icon -->
+      <span class="arrow">+</span>
     </button>
     <div class="content">
-      <!-- TikTok Edit 1 -->
       <div class="project">
         <h4>TikTok Edit 1</h4>
         <iframe src="https://www.tiktok.com/embed/v2/7488102946782055710"
@@ -263,7 +272,6 @@
                 style="border: none; display: block;"></iframe>
       </div>
 
-      <!-- TikTok Edit 2 -->
       <div class="project">
         <h4>TikTok Edit 2</h4>
         <iframe src="https://www.tiktok.com/embed/v2/7478408102598003998?lang=en"
@@ -347,5 +355,4 @@
 
 </body>
 </html>
-
 
