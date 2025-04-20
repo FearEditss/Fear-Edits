@@ -4,14 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Video Editing | Fear Edits</title>
+ 
+  <!-- Google Font: Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
+      font-family: 'Poppins', sans-serif; /* Updated font */
       background: #fff;
       color: #000;
       height: 100%;
       overflow-y: auto; /* Allow scrolling */
+      overflow-y: auto;
     }
 
     /* White net effect background */
@@ -28,8 +33,9 @@
       background: transparent;
       position: relative;
       width: 100vw;
-      height: 300px;
+      height: 200px; /* Adjusted to match the photo-project header size */
       overflow: hidden;
+      height: 180px; /* Adjusted height for proper header size */
       display: flex;
       align-items: center;
       justify-content: center;
@@ -41,14 +47,16 @@
       height: 100%;
       object-fit: cover;
       object-position: center;
+      object-fit: contain;
     }
 
-    /* Home button - adjust its position */
     .home-btn {
       position: absolute;
       top: 250px; /* Adjusted to align better with content */
+      top: 250px; /* Adjusted position to align better with the banner */
       left: 50%;
       transform: translateX(-50%); /* Centered horizontally */
+      transform: translateX(-50%);
       z-index: 10;
       text-align: center;
       max-width: 500px;
@@ -87,6 +95,7 @@
       text-align: center;
     }
 
+    /* Collapsible section styling */
     .experience-container {
       background: #333;
       color: #fff;
@@ -101,33 +110,86 @@
       text-align: center;
     }
 
-    /* Gradient dropdown for each section */
-    .dropdown {
-      background: linear-gradient(135deg, #5dcafc, #4ba6d2); /* Gradient background */
+    .collapsible {
+      background: linear-gradient(135deg, #5dcafc, #ffffff);
       color: #fff;
-      font-size: 1.8rem; /* Reduced font size */
-      font-weight: bold;
-      padding: 15px 25px; /* Adjusted padding */
-      border-radius: 8px;
-      margin-bottom: 20px; /* Reduced margin */
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Softer shadow */
-      text-transform: uppercase;
-      letter-spacing: 1.5px; /* Reduced letter-spacing */
       cursor: pointer;
-      transition: background 0.3s ease;
+      padding: 15px;
+      width: 100%;
+      text-align: center;
+      border: none;
+      outline: none;
+      font-size: 1.5rem;
+      border-radius: 10px;
+      transition: 0.3s;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      opacity: 0.9; /* Slight transparency */
+      opacity: 0.9;
     }
 
-    .dropdown:hover {
-      background: #4ba6d2;
+    .collapsible:hover {
+      background: linear-gradient(135deg, #4ba6d2, #ffffff);
+    }
+
+    .collapsible.active {
+      background: linear-gradient(135deg, #3a8fb1, #ffffff); /* Active state color */
+      background: linear-gradient(135deg, #3a8fb1, #ffffff);
+    }
+
+    .collapsible .arrow {
+      font-size: 1.5rem;
+      color: #5dcafc; /* Light blue for the arrow */
+      color: #5dcafc;
+      transition: transform 0.3s ease;
+    }
+
+    .collapsible.active .arrow {
+      transform: rotate(45deg); /* Rotate the plus to form a cross */
+      transform: rotate(45deg);
     }
 
     .content {
+      padding: 0 20px;
       display: none;
-      margin-top: 15px;
-      background-color: #333;
-      color: white;
-      padding: 20px;
+      overflow: hidden;
+      background-color: #444;
+      border-radius: 10px;
+      margin-top: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Adjusted size for project boxes */
+    .project {
+      background: #333;
+      color: #fff;
+      padding: 15px; /* Reduced padding */
+      padding: 15px;
+      border: 1px solid #444;
       border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 400px; /* Adjusted width for better fit */
+      height: 600px; /* Restored the height for the videos */
+      width: 400px;
+      height: 600px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .project iframe {
+      width: 100%;
+      height: 80%; /* Adjusted iframe height */
+      height: 80%;
+      border: none;
+    }
+
+    .project h4 {
+      text-align: center;
+      margin-bottom: 10px;
     }
 
     .social-links {
@@ -165,17 +227,18 @@
 
       .project iframe {
         height: 250px; /* Adjust iframe height for mobile */
+        height: 250px;
       }
     }
+
   </style>
 </head>
 <body>
 
-  <!-- White net effect background -->
   <div id="particles-js"></div>
 
   <header>
-    <img src="https://feareditss.github.io/Fear-Edits/banner.png" alt="Fear Edits Banner" style="max-height: 100%; width: auto; object-fit: contain; display: block;" />
+    <img src="https://feareditss.github.io/Fear-Edits/banner.png" alt="Fear Edits Banner" />
   </header>
 
   <div class="home-btn">
@@ -191,49 +254,54 @@
     </div>
   </section>
 
-  <!-- YouTube Section with Dropdown -->
+  <!-- Collapsible YouTube Section -->
   <section>
-    <div class="dropdown" onclick="toggleContent('youtubeContent')">YouTube</div>
-    <div id="youtubeContent" class="content">
-      <div class="project-container">
-        <div class="project">
-          <h4>YouTube Shorts</h4>
-          <iframe src="https://www.youtube.com/embed/OuLI8OB4Vc4"
-            title="YouTube Shorts Player"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen></iframe>
-        </div>
+    <button class="collapsible">
+      YouTube
+      <span class="arrow">+</span> <!-- Plus icon -->
+    </button>
+    <div class="content">
+      <div class="project">
+        <h4>YouTube Shorts</h4>
+        <iframe src="https://www.youtube.com/embed/OuLI8OB4Vc4"
+          title="YouTube Shorts Player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
       </div>
     </div>
   </section>
 
-  <!-- TikTok Section with Dropdown -->
+  <!-- Collapsible TikTok Section -->
   <section>
-    <div class="dropdown" onclick="toggleContent('tiktokContent')">TikTok</div>
-    <div id="tiktokContent" class="content">
-      <div class="project-container">
-        <div class="project">
-          <h4>TikTok Edit 1</h4>
-          <iframe src="https://www.tiktok.com/embed/v2/7488102946782055710"
-                  title="TikTok Embed 1"
-                  width="100%"
-                  height="100%"
-                  frameborder="0"
-                  scrolling="no"
-                  allowfullscreen
-                  style="border: none; display: block;"></iframe>
-        </div>
-        <div class="project">
-          <h4>TikTok Edit 2</h4>
-          <iframe src="https://www.tiktok.com/embed/v2/7478408102598003998?lang=en"
-                  title="TikTok Embed 2"
-                  width="100%"
-                  height="100%"
-                  frameborder="0"
-                  scrolling="no"
-                  allowfullscreen
-                  style="border: none; display: block;"></iframe>
-        </div>
+    <button class="collapsible">
+      TikTok
+      <span class="arrow">+</span> <!-- Plus icon -->
+    </button>
+    <div class="content">
+      <!-- TikTok Edit 1 -->
+      <div class="project">
+        <h4>TikTok Edit 1</h4>
+        <iframe src="https://www.tiktok.com/embed/v2/7488102946782055710"
+                title="TikTok Embed 1"
+                width="100%"
+                height="100%"
+                frameborder="0"
+                scrolling="no"
+                allowfullscreen
+                style="border: none; display: block;"></iframe>
+      </div>
+
+      <!-- TikTok Edit 2 -->
+      <div class="project">
+        <h4>TikTok Edit 2</h4>
+        <iframe src="https://www.tiktok.com/embed/v2/7478408102598003998?lang=en"
+                title="TikTok Embed 2"
+                width="100%"
+                height="100%"
+                frameborder="0"
+                scrolling="no"
+                allowfullscreen
+                style="border: none; display: block;"></iframe>
       </div>
     </div>
   </section>
@@ -262,16 +330,6 @@
 
   <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
   <script>
-    // Function to toggle dropdown content visibility
-    function toggleContent(id) {
-      var content = document.getElementById(id);
-      if (content.style.display === "block") {
-        content.style.display = "none";
-      } else {
-        content.style.display = "block";
-      }
-    }
-
     particlesJS("particles-js", {
       "particles": {
         "number": { "value": 80 },
@@ -299,6 +357,20 @@
       },
       "retina_detect": true
     });
+
+    // JavaScript to handle collapsible tabs
+    var coll = document.getElementsByClassName("collapsible");
+    for (var i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.display === "block") {
+          content.style.display = "none";
+        } else {
+          content.style.display = "block";
+        }
+      });
+    }
   </script>
 
 </body>
