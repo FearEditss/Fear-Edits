@@ -8,8 +8,8 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: #fff; /* White background */
-      color: #000; /* Black text color */
+      background: #fff;
+      color: #000;
     }
     header {
       background: #111;
@@ -29,9 +29,9 @@
     }
     .home-btn {
       position: absolute;
-      top: 35px; /* Adjusted to move the button lower */
+      top: 35px;
       left: 20px;
-      z-index: 10; /* Ensure button stays on top */
+      z-index: 10;
       text-align: center;
       max-width: 500px;
       padding: 10px 20px;
@@ -44,12 +44,12 @@
       display: inline-block;
       padding: 10px 20px;
       border-radius: 50px;
-      background: #5dcafc; /* Set the button color to #5dcafc */
-      border: 2px solid #5dcafc; /* Match the border color */
+      background: #5dcafc;
+      border: 2px solid #5dcafc;
       transition: background 0.3s, transform 0.2s;
     }
     .home-btn a:hover {
-      background: #4b8fa3; /* Darken the button on hover */
+      background: #4b8fa3;
       transform: scale(1.05);
     }
     section {
@@ -65,8 +65,8 @@
       text-align: center;
     }
     .experience-container {
-      background: #333; /* Darker background for contrast */
-      color: #fff; /* White text color */
+      background: #333;
+      color: #fff;
       padding: 40px;
       border-radius: 10px;
       border: 1px solid #444;
@@ -79,21 +79,21 @@
     }
     .project-container {
       display: flex;
-      justify-content: space-between; /* Arrange videos side by side */
-      gap: 20px; /* Space between the videos */
-      flex-wrap: wrap; /* Allow wrapping on smaller screens */
+      justify-content: center; /* ← centered horizontally */
+      gap: 20px;
+      flex-wrap: wrap; /* allows stacking on smaller screens */
     }
     .project {
-      background: #333; /* Dark background for project boxes */
-      color: #fff; /* White text color */
+      background: #333;
+      color: #fff;
       padding: 20px;
       border: 1px solid #444;
       border-radius: 8px;
       display: flex;
       flex-direction: column;
       align-items: center;
-      width: 500px; /* Adjusted width */
-      height: 800px; /* Adjusted height */
+      width: 500px;
+      height: 800px;
     }
     .project iframe {
       width: 100%;
@@ -105,7 +105,6 @@
       margin-bottom: 10px;
     }
 
-    /* Social media links styles */
     .social-links {
       display: flex;
       justify-content: center;
@@ -132,22 +131,16 @@
       position: fixed;
       width: 100%;
       height: 100%;
-      background: #fff; /* Keep particles background white */
+      background: #fff;
       z-index: -1;
       top: 0;
       left: 0;
     }
 
-    /* Media Queries for mobile responsiveness */
     @media (max-width: 768px) {
-      .project-container {
-        flex-direction: column; /* Stack videos vertically */
-        align-items: center; /* Center the videos */
-        gap: 30px; /* Add more space between videos */
-      }
       .project {
-        width: 90%; /* Adjust the width to fit better on mobile */
-        height: 500px; /* Adjust the height for mobile */
+        width: 90%;
+        height: 500px;
       }
     }
   </style>
@@ -158,7 +151,6 @@
     <img src="https://feareditss.github.io/Fear-Edits/banner.png" alt="Fear Edits Banner" style="max-height: 100%; width: auto; object-fit: contain; display: block;" />
   </header>
 
-  <!-- Return Home Button inside a text bubble -->
   <div class="home-btn">
     <a href="index.html">Return Home</a>
   </div>
@@ -172,7 +164,6 @@
     </div>
   </section>
 
-  <!-- Projects Section -->
   <section>
     <h2>Projects</h2>
     <div class="project-container">
@@ -198,7 +189,6 @@
     </div>
   </section>
 
-  <!-- Social Media Links Section -->
   <section>
     <h2>Follow Me</h2>
     <div class="social-links">
@@ -220,6 +210,7 @@
   <footer>
     &copy; 2025 Fear Edits. All Rights Reserved.
   </footer>
+
   <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
   <script>
     particlesJS("particles-js", {
@@ -250,6 +241,5 @@
       "retina_detect": true
     });
   </script>
-
 </body>
 </html>
