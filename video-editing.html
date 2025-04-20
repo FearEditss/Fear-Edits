@@ -79,9 +79,9 @@
     }
     .project-container {
       display: flex;
-      justify-content: center; /* ← centered horizontally */
+      justify-content: center;
       gap: 20px;
-      flex-wrap: wrap; /* allows stacking on smaller screens */
+      flex-wrap: wrap;
     }
     .project {
       background: #333;
@@ -93,7 +93,7 @@
       flex-direction: column;
       align-items: center;
       width: 500px;
-      height: 800px;
+      height: auto;
     }
     .project iframe {
       width: 100%;
@@ -104,7 +104,6 @@
       text-align: center;
       margin-bottom: 10px;
     }
-
     .social-links {
       display: flex;
       justify-content: center;
@@ -119,7 +118,6 @@
     .social-links a img:hover {
       transform: scale(1.1);
     }
-
     footer {
       text-align: center;
       padding: 40px 20px;
@@ -136,11 +134,10 @@
       top: 0;
       left: 0;
     }
-
     @media (max-width: 768px) {
       .project {
         width: 90%;
-        height: 500px;
+        height: auto;
       }
     }
   </style>
@@ -167,6 +164,8 @@
   <section>
     <h2>Projects</h2>
     <div class="project-container">
+
+      <!-- YOUTUBE SHORTS -->
       <div class="project">
         <h4>YouTube Shorts</h4>
         <iframe src="https://www.youtube.com/embed/OuLI8OB4Vc4"
@@ -174,28 +173,29 @@
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen></iframe>
       </div>
+
+      <!-- TIKTOK EDITS -->
       <div class="project">
         <h4>TikTok Edits</h4>
         <iframe src="https://www.tiktok.com/embed/v2/7488102946782055710"
-                title="TikTok Embed"
+                title="TikTok Embed 1"
                 width="100%"
-                height="700"
+                height="350"
                 frameborder="0"
                 scrolling="no"
                 allowfullscreen
-                style="border: none; display: block;">
-          <div class="project">
-        <h4>TikTok Edits</h4>
-        <iframe src="https://www.tiktok.com/@rodeonationyt/video/7478408102598003998?lang=en"
-                title="TikTok Embed"
+                style="border: none; display: block; margin-bottom: 20px;"></iframe>
+
+        <iframe src="https://www.tiktok.com/@rodeonationyt/video/7478408102598003998"
+                title="TikTok Embed 2"
                 width="100%"
-                height="700"
+                height="350"
                 frameborder="0"
                 scrolling="no"
                 allowfullscreen
-                style="border: none; display: block;">
-        </iframe>
+                style="border: none; display: block;"></iframe>
       </div>
+
     </div>
   </section>
 
