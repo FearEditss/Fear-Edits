@@ -7,7 +7,7 @@
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
+      font-family: 'Poppins', sans-serif;
       background: #fff;
       color: #000;
       height: 100%;
@@ -28,25 +28,22 @@
       background: transparent;
       position: relative;
       width: 100vw;
-      height: 300px;
-      overflow: hidden;
+      height: 180px; /* Adjusted height for proper header size */
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-top: 0;
     }
 
     header img {
       width: 100%;
       height: 100%;
-      object-fit: cover;
-      object-position: center;
+      object-fit: contain;
     }
 
     /* Home button - adjust its position */
     .home-btn {
       position: absolute;
-      top: 200px; /* Adjusted to move the button further up */
+      top: 250px; /* Adjusted position to align better with the banner */
       left: 50%;
       transform: translateX(-50%);
       z-index: 10;
@@ -101,30 +98,71 @@
       text-align: center;
     }
 
-    .project-container {
+    .collapsible {
+      background: linear-gradient(135deg, #5dcafc, #ffffff);
+      color: #fff;
+      cursor: pointer;
+      padding: 15px;
+      width: 100%;
+      text-align: center;
+      border: none;
+      outline: none;
+      font-size: 1.5rem;
+      border-radius: 10px;
+      transition: 0.3s;
       display: flex;
-      justify-content: center;
-      gap: 20px;
-      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      opacity: 0.9;
+    }
+
+    .collapsible:hover {
+      background: linear-gradient(135deg, #4ba6d2, #ffffff);
+    }
+
+    .collapsible.active {
+      background: linear-gradient(135deg, #3a8fb1, #ffffff);
+    }
+
+    .collapsible .arrow {
+      font-size: 1.5rem;
+      color: #5dcafc;
+      transition: transform 0.3s ease;
+    }
+
+    .collapsible.active .arrow {
+      transform: rotate(45deg);
+    }
+
+    .content {
+      padding: 0 20px;
+      display: none;
+      overflow: hidden;
+      background-color: #444;
+      border-radius: 10px;
+      margin-top: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     }
 
     .project {
       background: #333;
       color: #fff;
-      padding: 20px;
+      padding: 15px;
       border: 1px solid #444;
       border-radius: 8px;
       display: flex;
       flex-direction: column;
       align-items: center;
-      width: 500px;
+      width: 400px;
       height: 600px; /* Increased height for better video display */
       margin-bottom: 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     }
 
     .project iframe {
       width: 100%;
-      height: 100%; /* Adjusted to fit the new box height */
+      height: 80%;
       border: none;
     }
 
@@ -167,7 +205,7 @@
       }
 
       .project iframe {
-        height: 250px; /* Adjust iframe height for mobile */
+        height: 250px;
       }
     }
 
@@ -175,11 +213,10 @@
 </head>
 <body>
 
-  <!-- White net effect background -->
   <div id="particles-js"></div>
 
   <header>
-    <img src="https://feareditss.github.io/Fear-Edits/banner.png" alt="Fear Edits Banner" style="max-height: 100%; width: auto; object-fit: contain; display: block;" />
+    <img src="https://feareditss.github.io/Fear-Edits/banner.png" alt="Fear Edits Banner" />
   </header>
 
   <div class="home-btn">
@@ -195,9 +232,13 @@
     </div>
   </section>
 
+  <!-- Collapsible YouTube Section -->
   <section>
-    <h2>YouTube</h2>
-    <div class="project-container">
+    <button class="collapsible">
+      YouTube
+      <span class="arrow">+</span>
+    </button>
+    <div class="content">
       <div class="project">
         <h4>YouTube Shorts</h4>
         <iframe src="https://www.youtube.com/embed/OuLI8OB4Vc4"
@@ -208,10 +249,13 @@
     </div>
   </section>
 
+  <!-- Collapsible TikTok Section -->
   <section>
-    <h2>TikTok</h2>
-    <div class="project-container">
-      <!-- TikTok Edit 1 -->
+    <button class="collapsible">
+      TikTok
+      <span class="arrow">+</span>
+    </button>
+    <div class="content">
       <div class="project">
         <h4>TikTok Edit 1</h4>
         <iframe src="https://www.tiktok.com/embed/v2/7488102946782055710"
@@ -224,7 +268,6 @@
                 style="border: none; display: block;"></iframe>
       </div>
 
-      <!-- TikTok Edit 2 (Updated) -->
       <div class="project">
         <h4>TikTok Edit 2</h4>
         <iframe src="https://www.tiktok.com/embed/v2/7478408102598003998?lang=en"
@@ -261,7 +304,6 @@
     &copy; 2025 Fear Edits. All Rights Reserved.
   </footer>
 
-  <!-- White net effect background -->
   <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
   <script>
     particlesJS("particles-js", {
@@ -291,7 +333,22 @@
       },
       "retina_detect": true
     });
+
+    // JavaScript to handle collapsible tabs
+    var coll = document.getElementsByClassName("collapsible");
+    for (var i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.display === "block") {
+          content.style.display = "none";
+        } else {
+          content.style.display = "block";
+        }
+      });
+    }
   </script>
 
 </body>
 </html>
+
