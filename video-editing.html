@@ -43,7 +43,6 @@
       object-position: center;
     }
 
-    /* Home button - adjust its position */
     .home-btn {
       position: absolute;
       top: 250px; /* Adjusted to align better with content */
@@ -87,25 +86,31 @@
       text-align: center;
     }
 
-    .experience-container {
-      background: #333;
+    /* Collapsible section styling */
+    .collapsible {
+      background-color: #333;
       color: #fff;
-      padding: 40px;
-      border-radius: 10px;
-      border: 1px solid #444;
-      line-height: 1.8;
-      font-size: 1.1rem;
-      font-style: italic;
-      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-      margin-bottom: 40px;
+      cursor: pointer;
+      padding: 15px;
+      width: 100%;
       text-align: center;
+      border: none;
+      outline: none;
+      font-size: 1.5rem;
+      border-radius: 5px;
+      transition: 0.3s;
     }
 
-    .project-container {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      flex-wrap: wrap;
+    .active, .collapsible:hover {
+      background-color: #555;
+    }
+
+    .content {
+      padding: 0 20px;
+      display: none;
+      overflow: hidden;
+      background-color: #444;
+      border-radius: 5px;
     }
 
     .project {
@@ -118,19 +123,14 @@
       flex-direction: column;
       align-items: center;
       width: 500px;
-      height: 600px; /* Increased height for better video display */
+      height: 600px;
       margin-bottom: 20px;
     }
 
     .project iframe {
       width: 100%;
-      height: 100%; /* Adjusted to fit the new box height */
+      height: 100%;
       border: none;
-    }
-
-    .project h4 {
-      text-align: center;
-      margin-bottom: 10px;
     }
 
     .social-links {
@@ -159,27 +159,14 @@
 
     a { color: #1e90ff; text-decoration: none; }
 
-    /* Mobile styles */
-    @media (max-width: 768px) {
-      .project {
-        width: 90%;
-        height: auto;
-      }
-
-      .project iframe {
-        height: 250px; /* Adjust iframe height for mobile */
-      }
-    }
-
   </style>
 </head>
 <body>
 
-  <!-- White net effect background -->
   <div id="particles-js"></div>
 
   <header>
-    <img src="https://feareditss.github.io/Fear-Edits/banner.png" alt="Fear Edits Banner" style="max-height: 100%; width: auto; object-fit: contain; display: block;" />
+    <img src="https://feareditss.github.io/Fear-Edits/banner.png" alt="Fear Edits Banner" />
   </header>
 
   <div class="home-btn">
@@ -195,9 +182,10 @@
     </div>
   </section>
 
+  <!-- Collapsible YouTube Section -->
   <section>
-    <h2>YouTube</h2>
-    <div class="project-container">
+    <button class="collapsible">YouTube</button>
+    <div class="content">
       <div class="project">
         <h4>YouTube Shorts</h4>
         <iframe src="https://www.youtube.com/embed/OuLI8OB4Vc4"
@@ -208,9 +196,10 @@
     </div>
   </section>
 
+  <!-- Collapsible TikTok Section -->
   <section>
-    <h2>TikTok</h2>
-    <div class="project-container">
+    <button class="collapsible">TikTok</button>
+    <div class="content">
       <!-- TikTok Edit 1 -->
       <div class="project">
         <h4>TikTok Edit 1</h4>
@@ -224,7 +213,7 @@
                 style="border: none; display: block;"></iframe>
       </div>
 
-      <!-- TikTok Edit 2 (Updated) -->
+      <!-- TikTok Edit 2 -->
       <div class="project">
         <h4>TikTok Edit 2</h4>
         <iframe src="https://www.tiktok.com/embed/v2/7478408102598003998?lang=en"
@@ -261,7 +250,6 @@
     &copy; 2025 Fear Edits. All Rights Reserved.
   </footer>
 
-  <!-- White net effect background -->
   <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
   <script>
     particlesJS("particles-js", {
@@ -291,6 +279,20 @@
       },
       "retina_detect": true
     });
+
+    // JavaScript to handle collapsible tabs
+    var coll = document.getElementsByClassName("collapsible");
+    for (var i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.display === "block") {
+          content.style.display = "none";
+        } else {
+          content.style.display = "block";
+        }
+      });
+    }
   </script>
 
 </body>
