@@ -111,6 +111,20 @@
     .social-links img:hover {
       transform: scale(1.1);
     }
+
+    /* Mobile Header Adjustments */
+    @media (max-width: 768px) {
+      header {
+        height: 120px; /* Smaller height for mobile */
+      }
+      header img {
+        max-width: 90%; /* Smaller image for mobile */
+        height: auto;
+      }
+      h1.site-title {
+        font-size: 2.5rem; /* Smaller text for mobile */
+      }
+    }
   </style>
 </head>
 <body>
