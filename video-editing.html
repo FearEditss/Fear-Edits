@@ -9,6 +9,7 @@
       margin: 0;
       font-family: Arial, sans-serif;
       color: #000;
+      overflow: hidden; /* Ensure no scrollbars */
     }
 
     /* Cloud Background (Vanta.js) */
@@ -110,14 +111,14 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      width: 500px; /* Reverted to original size */
-      height: auto; /* Auto height based on content */
+      width: 500px;
+      height: auto;
       margin-bottom: 20px;
     }
 
     .project iframe {
       width: 100%;
-      height: 315px; /* Adjust iframe height */
+      height: 315px;
       border: none;
     }
 
@@ -167,10 +168,11 @@
   </style>
 </head>
 <body>
+
   <!-- Vanta.js Cloud Background -->
   <div id="vanta-clouds"></div>
 
-  <header style="background: transparent; position: relative; z-index: 1; height: 300px; display: flex; align-items: center; justify-content: center;">
+  <header>
     <img src="https://feareditss.github.io/Fear-Edits/banner.png" alt="Fear Edits Banner" style="max-height: 100%; width: auto; object-fit: contain; display: block;" />
   </header>
 
@@ -265,5 +267,6 @@
       zoom: 1.0
     });
   </script>
+
 </body>
 </html>
