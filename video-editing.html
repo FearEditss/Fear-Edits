@@ -11,7 +11,7 @@
       background: #fff;
       color: #000;
       height: 100%;
-      overflow-y: auto;
+      overflow-y: auto; /* Allow scrolling */
     }
 
     /* White net effect background */
@@ -28,23 +28,27 @@
       background: transparent;
       position: relative;
       width: 100vw;
-      height: 180px;
+      height: 300px;
+      overflow: hidden;
       display: flex;
       align-items: center;
       justify-content: center;
+      margin-top: 0;
     }
 
     header img {
       width: 100%;
       height: 100%;
-      object-fit: contain;
+      object-fit: cover;
+      object-position: center;
     }
 
+    /* Home button - adjust its position */
     .home-btn {
       position: absolute;
-      top: 145px;
+      top: 250px; /* Adjusted to align better with content */
       left: 50%;
-      transform: translateX(-50%);
+      transform: translateX(-50%); /* Centered horizontally */
       z-index: 10;
       text-align: center;
       max-width: 500px;
@@ -99,7 +103,7 @@
 
     .project-container {
       display: flex;
-      justify-content: space-between; /* Ensures videos are side by side */
+      justify-content: center;
       gap: 20px;
       flex-wrap: wrap;
     }
@@ -113,14 +117,14 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      width: 48%; /* Adjusted width to fit side by side */
-      height: 600px; /* Maintain height for better video display */
+      width: 500px;
+      height: 600px; /* Increased height for better video display */
       margin-bottom: 20px;
     }
 
     .project iframe {
       width: 100%;
-      height: 100%;
+      height: 100%; /* Adjusted to fit the new box height */
       border: none;
     }
 
@@ -163,7 +167,7 @@
       }
 
       .project iframe {
-        height: 250px;
+        height: 250px; /* Adjust iframe height for mobile */
       }
     }
 
@@ -183,6 +187,28 @@
   </div>
 
   <section>
+    <h2>Professional Experience</h2>
+    <div class="experience-container">
+      During my time working with Fortnite, I created original social media content for major platforms like TikTok, Instagram, and Twitter. My work helped promote their brand in engaging and authentic ways, allowing me to blend gaming culture with dynamic editing techniques. 
+      <br><br>
+      Outside of that, I independently run and manage multiple content channels. I handle everything — from filming and editing to trend analysis and platform strategy. My TikTok channel has grown steadily through consistent posting, niche-targeted storytelling, and mastering short-form editing techniques that connect with audiences fast.
+    </div>
+  </section>
+
+  <section>
+    <h2>YouTube</h2>
+    <div class="project-container">
+      <div class="project">
+        <h4>YouTube Shorts</h4>
+        <iframe src="https://www.youtube.com/embed/OuLI8OB4Vc4"
+          title="YouTube Shorts Player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+
+  <section>
     <h2>TikTok</h2>
     <div class="project-container">
       <!-- TikTok Edit 1 -->
@@ -198,7 +224,7 @@
                 style="border: none; display: block;"></iframe>
       </div>
 
-      <!-- TikTok Edit 2 -->
+      <!-- TikTok Edit 2 (Updated) -->
       <div class="project">
         <h4>TikTok Edit 2</h4>
         <iframe src="https://www.tiktok.com/embed/v2/7478408102598003998?lang=en"
@@ -210,6 +236,24 @@
                 allowfullscreen
                 style="border: none; display: block;"></iframe>
       </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Follow Me</h2>
+    <div class="social-links">
+      <a href="https://x.com/FearEdits_" target="_blank">
+        <img src="twitter-logo.png" alt="Twitter">
+      </a>
+      <a href="https://www.tiktok.com/@rodeonationyt?lang=en" target="_blank">
+        <img src="tiktik-logo.png" alt="TikTok">
+      </a>
+      <a href="https://www.youtube.com/@RodeoNationMedia" target="_blank">
+        <img src="youtube-logo.png" alt="YouTube">
+      </a>
+      <a href="https://www.instagram.com/fearedphotos/" target="_blank">
+        <img src="instagram-logo.png" alt="Instagram">
+      </a>
     </div>
   </section>
 
@@ -248,9 +292,6 @@
       "retina_detect": true
     });
   </script>
-
-</body>
-</html>
 
 </body>
 </html>
