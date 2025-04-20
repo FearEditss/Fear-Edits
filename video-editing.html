@@ -12,10 +12,7 @@
     body {
       margin: 0;
       font-family: 'Poppins', sans-serif;
-      background-color: #FAF9F6; /* Updated to desired off-white */
-      background-image: linear-gradient(45deg, #aaa 1px, transparent 1px),
-                        linear-gradient(-45deg, #aaa 1px, transparent 1px);
-      background-size: 30px 30px;
+      background: #fff;
     }
 
     #particles-js {
@@ -273,9 +270,9 @@
     <div class="content">
       <div class="video-wrapper">
         <div class="project">
-          <h4></h4>
+          <h4>TikTok Edit 1</h4>
           <iframe src="https://www.tiktok.com/embed/v2/7488102946782055710"
-                  title="TikTok"
+                  title="TikTok Embed 1"
                   width="100%"
                   height="100%"
                   frameborder="0"
@@ -285,7 +282,7 @@
         </div>
 
         <div class="project">
-          <h4></h4>
+          <h4>TikTok Edit 2</h4>
           <iframe src="https://www.tiktok.com/embed/v2/7478408102598003998?lang=en"
                   title="TikTok Embed 2"
                   width="100%"
@@ -322,47 +319,60 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-  <script>
-    particlesJS("particles-js", {
-      "particles": {
-        "number": { "value": 80 },
-        "color": { "value": "#5dcafc" },
-        "shape": { "type": "circle" },
-        "opacity": { "value": 0.3 },
-        "size": { "value": 2 },
-        "line_linked": {
+<script>
+  particlesJS("particles-js", {
+    "particles": {
+      "number": {
+        "value": 80,
+        "density": {
           "enable": true,
-          "distance": 150,
-          "color": "#5dcafc",
-          "opacity": 0.4,
-          "width": 1
-        },
-        "move": {
-          "enable": true,
-          "speed": 2
+          "value_area": 800
         }
       },
-      "interactivity": {
-        "events": {
-          "onhover": { "enable": true, "mode": "grab" },
-          "onclick": { "enable": false }
-        }
+      "color": { "value": "#5dcafc" },
+      "shape": {
+        "type": "circle"
       },
-      "retina_detect": true
-    });
+      "opacity": {
+        "value": 0.5
+      },
+      "size": {
+        "value": 3
+      },
+      "line_linked": {
+        "enable": true,
+        "distance": 150,
+        "color": "#5dcafc",
+        "opacity": 0.4,
+        "width": 1
+      },
+      "move": {
+        "enable": true,
+        "speed": 3
+      }
+    },
+    "interactivity": {
+      "events": {
+        "onhover": { "enable": true, "mode": "grab" },
+        "onclick": { "enable": false }
+      }
+    },
+    "retina_detect": true
+  });
 
-    var coll = document.getElementsByClassName("collapsible");
-    for (var i = 0; i < coll.length; i++) {
-      coll[i].addEventListener("click", function() {
-        this.classList.toggle("active");
-        var content = this.nextElementSibling;
-        if (content.style.display === "block") {
-          content.style.display = "none";
-        } else {
-          content.style.display = "block";
-        }
-      });
-    }
-  </script>
+  var coll = document.getElementsByClassName("collapsible");
+  for (var i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var content = this.nextElementSibling;
+      if (content.style.display === "block") {
+        content.style.display = "none";
+      } else {
+        content.style.display = "block";
+      }
+    });
+  }
+</script>
 </body>
 </html>
+
